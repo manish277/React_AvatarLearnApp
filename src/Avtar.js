@@ -5,7 +5,10 @@ import AvtarList from './Avtarlist'
 // import 'tachyons';
 import 'tachyons'
 import { render } from '@testing-library/react';
-
+// import Menu from './Menu'
+// import About from './About'
+// import Contact from './Contact'
+// import { BrowserRouter, Route, Switch } from 'react-router-dom'
 // const Avtar = (props) => {
 
 
@@ -16,8 +19,8 @@ class Avtar extends Component {
             name: 'Welcome to avatar app'
         }
     }
-    namechange(){
-        this.setState({name:'This is first app for learn'})
+    namechange() {
+        this.setState({ name: 'This is first app for learn' })
     }
     render() {
         const AvtarListArray = [
@@ -50,11 +53,19 @@ class Avtar extends Component {
             />
         })
         return (
-            <div className="mainpage tc" >
-                <h1>{this.state.name}</h1>
-                {arrayCard}
-                <button className="pd4" onClick={() => this.namechange()}> Subscribe</button>
-            </div >
+            // <BrowserRouter>
+                <div className="mainpage tc" >
+                    <h1>{this.state.name}</h1>
+                    {/* <Menu />
+                    <Switch>
+                    <Route path="/about" component={About} />
+                    <Route path="/" exact component={About} />
+                    <Route path="/contact" component={Contact} />
+                    </Switch> */}
+                    {arrayCard}
+                    <button className="pd4" onClick={() => this.namechange()}> Subscribe</button>
+                </div >
+            // </BrowserRouter>
         )
     }
 }

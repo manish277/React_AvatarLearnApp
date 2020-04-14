@@ -1,0 +1,9 @@
+.Aboutstyle{
+    background: yellowgreen;
+width: 100%;    
+height: 100px;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+}
